@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/about_preference_module_title" android:summary="@string/about_preference_module_summary" />
+    <Preference android:title="@string/about_preference_version" android:key="version" />
+    <Preference android:title="@string/about_preference_feedback"
+                android:summary="@string/about_preference_feedback_summary" android:key="suggestion"/>
+    <Preference android:title="@string/about_preference_about_author" android:summary="@string/about_preference_author_summary" android:key="zfb" />
+    <PreferenceCategory android:title="@string/about_preference_author_app">
+        <Preference android:title="@string/about_preference_look_wifi"
+                    android:summary="@string/about_preference_look_wifi_summary"
+                    android:key="app_wifi"/>
+        <Preference android:title="@string/about_preference_speed_title"
+                    android:summary="@string/about_preference_speed_summary"
+                    android:key="app_speed" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="依赖框架">
+        <Preference
+            android:title="@string/about_preference__Xposed_title"
+            android:summary="https://github.com/rovo89/XposedInstaller"
+            android:key="xposed"
+            />
+    </PreferenceCategory>
+</PreferenceScreen>

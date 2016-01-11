@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">QQHook</string>
+    <string name="text">QQ号与密码是一一对应的，最后若显示密码验证成功说明密码是正确的，
+    如果密码显示为!@#ewaGbhkc$!!=说明该QQ在手机上登录过</string>
+
+    <!-- 菜单-->
+    <string name="menu_about">关于</string>
+    <string name="menu_view_text">文本浏览</string>
+    <string name="menu_help">帮助</string>
+    <string name="menu_disclaimer">免责声明</string>
+
+    <!-- 按钮-->
+    <string name="button_clear">清空</string>
+
+    <!-- MainActivity-->
+    <string name="dialog_sd_message">未发现SD卡或SD卡不能读写，可能影响使用</string>
+    <string name="dialog_warming_title">警告！！</string>
+    <string name="dialog_warming_message">开发人员不对使用者的使用负责，请在遵循当地的法律使用！</string>
+    <string name="dialog_warming_positive_button">同意</string>
+    <string name="dialog_warming_negative_button">不同意</string>
+    <string name="dialog_is_mod_title">提示</string>
+    <string name="dialog_is_mod_message">请先到Xposed安装器勾选该模块，重启</string>
+    <string name="dialog_is_mod_positive_button">确定</string>
+    <string name="toast_no">还没有记录过登录成功的QQ或SD卡无法读写</string>
+
+    <!-- EditActivity-->
+    <string name="no_login">尚未登录过QQ</string>
+    <string name="dialog_delete_title">警告</string>
+    <string name="dialog_delete_message">是否清除记录</string>
+    <string name="dialog_delete_negative_button">否</string>
+    <string name="dialog_delete_positive_button">是</string>
+    <string name="toast_clean_success">清除成功！</string>
+    <string name="toast_clean_error">清除出错！</string>
+    <string name="dialog_help_title">帮助</string>
+
+    <!-- about_Preference-->
+    <string name="about_preference_module_title">模块功能</string>
+    <string name="about_preference_module_summary">记录输入的QQ密码</string>
+    <string name="about_preference_version">版本号</string>
+    <string name="about_preference_feedback">建议/反馈</string>
+    <string name="about_preference_feedback_summary">有什么好的想法可以通过微博告诉我！\n点击打开微博\nhttp://weibo.com/u/2483019873</string>
+    <string name="about_preference_about_author">关于作者@DH镔</string>
+    <string name="about_preference_author_summary">本人因兴趣开始接触编程，如果你喜欢这个APP,是否可以给我点鼓励，捐赠我！每一分钱都是我前进的动力，支付宝：13169777377（点击复制）</string>
+    <string name="about_preference_author_app">同作者软件</string>
+    <string name="about_preference_look_wifi">WIFI密码查看器</string>
+    <string name="about_preference_look_wifi_summary">体积最小的WIFI密码查看器</string>
+    <string name="about_preference_speed_title">网速悬浮窗</string>
+    <string name="about_preference_speed_summary">简单实用</string>
+    <string name="about_preference__Xposed_title">Xposed框架@rovo89</string>
+
+</resources>

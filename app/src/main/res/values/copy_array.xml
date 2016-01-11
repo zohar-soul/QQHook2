@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="copy">
+        <item>复制QQ号码</item>
+        <item>复制QQ密码</item>
+    </array>
+</resources>
