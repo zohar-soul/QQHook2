@@ -26,6 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 public class MainActivity extends Activity {
 
     private ListView listView;
@@ -34,8 +35,6 @@ public class MainActivity extends Activity {
     private SharedPreferences preferences;
     private static final String IS_AGREE = "isAgree";
     private List<QqInfo> qqInfos;
-    private AlertDialog modDialog;
-    private AlertDialog warmingDialog;
 
 //    @SuppressLint("HandlerLeak")
 //    class MyHandle extends Handler {
@@ -59,11 +58,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        Android中判断SD卡是否存在，并且可以进行写操作，可以使用如下代码
-        if (!android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED)) {
-            new AlertDialog.Builder(this).setMessage(R.string.dialog_sd_message).show();
-        }
 
         listView = (ListView) findViewById(R.id.qqList);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -95,8 +89,11 @@ public class MainActivity extends Activity {
 
         File file = new File(Common.path);
         Log.d(TAG, file.canWrite()+""+file.canRead());
-        if (!file.canWrite()&&!file.canRead()){
+        if (!file.exists()){
             Toast.makeText(this, R.string.toast_no,Toast.LENGTH_LONG).show();
+        }
+        if (!Common.checkSdCardIsCanWrite()) {
+            new AlertDialog.Builder(this).setMessage(R.string.dialog_sd_message).show();
         }
     }
 
@@ -152,7 +149,7 @@ public class MainActivity extends Activity {
     }
 
     private void showWarmingDialog() {
-        warmingDialog = new AlertDialog.Builder(this).setTitle(R.string.dialog_warming_title)
+        AlertDialog warmingDialog = new AlertDialog.Builder(this).setTitle(R.string.dialog_warming_title)
                 .setMessage(R.string.dialog_warming_message)
                 .setPositiveButton(R.string.dialog_warming_positive_button, new DialogInterface.OnClickListener() {
                     @Override
@@ -177,7 +174,7 @@ public class MainActivity extends Activity {
     }
 
     private void showIsModDialog() {
-        modDialog = new AlertDialog.Builder(this).setTitle(R.string.dialog_is_mod_title)
+        AlertDialog  modDialog = new AlertDialog.Builder(this).setTitle(R.string.dialog_is_mod_title)
                 .setMessage(R.string.dialog_is_mod_message)
                 .setPositiveButton(R.string.dialog_is_mod_positive_button, new DialogInterface.OnClickListener() {
                     @Override
@@ -196,4 +193,5 @@ public class MainActivity extends Activity {
     private static boolean isMod() {
         return false;
     }
+
 }

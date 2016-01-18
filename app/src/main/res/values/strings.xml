@@ -8,6 +8,7 @@
     <string name="menu_view_text">文本浏览</string>
     <string name="menu_help">帮助</string>
     <string name="menu_disclaimer">免责声明</string>
+    <string name="menu_auto_send_message">刷屏器</string>
 
     <!-- 按钮-->
     <string name="button_clear">清空</string>
@@ -21,7 +22,7 @@
     <string name="dialog_is_mod_title">提示</string>
     <string name="dialog_is_mod_message">请先到Xposed安装器勾选该模块，重启</string>
     <string name="dialog_is_mod_positive_button">确定</string>
-    <string name="toast_no">还没有记录过登录成功的QQ或SD卡无法读写</string>
+    <string name="toast_no">还没有记录过登录成功的QQ</string>
 
     <!-- EditActivity-->
     <string name="no_login">尚未登录过QQ</string>

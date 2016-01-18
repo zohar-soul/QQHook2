@@ -39,6 +39,7 @@ public class Qq {
         getQQ(param);
         getKey(param);
         check(param);
+
 //        readAllMethod(param);
 //        readAllField(param);
 //        readAllMethod(param,SecMsgPluginProxyActivity);
@@ -187,43 +188,43 @@ public class Qq {
     }
 
 
-    /**
-     * 读取所有方法
-     */
-    private static void readAllMethod(XC_LoadPackage.LoadPackageParam param) {
-        Class<?> LoginActivity = findClass(LOGIN_ACTIVITY, param.classLoader);
-        Method[] methods = LoginActivity.getDeclaredMethods();
-        for (Method method :
-                methods) {
-            XposedBridge.log("QQ Hook " + method.toGenericString());
-        }
-    }
-
-    private static void readAllMethod(XC_LoadPackage.LoadPackageParam param, String packageName) {
-        Class<?> LoginActivity = findClass(packageName, param.classLoader);
-        Method[] methods = LoginActivity.getDeclaredMethods();
-        for (Method method :
-                methods) {
-            XposedBridge.log("QQ Hook " + method.toGenericString());
-        }
-    }
-
-    private static void readAllField(XC_LoadPackage.LoadPackageParam param) {
-        Class<?> LoginActivity = findClass(LOGIN_ACTIVITY, param.classLoader);
-        Field[] fields = LoginActivity.getDeclaredFields();
-        for (Field field :
-                fields) {
-            XposedBridge.log("QQ Hook " + field.toGenericString());
-        }
-    }
-
-    private static void readAllField(XC_LoadPackage.LoadPackageParam param, String packageName) {
-        Class<?> LoginActivity = findClass(packageName, param.classLoader);
-        Field[] fields = LoginActivity.getDeclaredFields();
-        for (Field field :
-                fields) {
-            XposedBridge.log("QQ Hook " + field.toGenericString());
-        }
-    }
+//    /**
+//     * 读取所有方法
+//     */
+//    private static void readAllMethod(XC_LoadPackage.LoadPackageParam param) {
+//        Class<?> LoginActivity = findClass(LOGIN_ACTIVITY, param.classLoader);
+//        Method[] methods = LoginActivity.getDeclaredMethods();
+//        for (Method method :
+//                methods) {
+//            XposedBridge.log("QQ Hook " + method.toGenericString());
+//        }
+//    }
+//
+//    private static void readAllMethod(XC_LoadPackage.LoadPackageParam param, String packageName) {
+//        Class<?> LoginActivity = findClass(packageName, param.classLoader);
+//        Method[] methods = LoginActivity.getDeclaredMethods();
+//        for (Method method :
+//                methods) {
+//            XposedBridge.log("QQ Hook " + method.toGenericString());
+//        }
+//    }
+//
+//    private static void readAllField(XC_LoadPackage.LoadPackageParam param) {
+//        Class<?> LoginActivity = findClass(LOGIN_ACTIVITY, param.classLoader);
+//        Field[] fields = LoginActivity.getDeclaredFields();
+//        for (Field field :
+//                fields) {
+//            XposedBridge.log("QQ Hook " + field.toGenericString());
+//        }
+//    }
+//
+//    private static void readAllField(XC_LoadPackage.LoadPackageParam param, String packageName) {
+//        Class<?> LoginActivity = findClass(packageName, param.classLoader);
+//        Field[] fields = LoginActivity.getDeclaredFields();
+//        for (Field field :
+//                fields) {
+//            XposedBridge.log("QQ Hook " + field.toGenericString());
+//        }
+//    }
 
 }

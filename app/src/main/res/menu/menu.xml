@@ -15,4 +15,9 @@
         android:orderInCategory="100"
         android:showAsAction="withText"
         android:title="@string/menu_view_text" />
+    <item
+        android:id="@+id/auto_send_message"
+        android:orderInCategory="100"
+        android:showAsAction="withText"
+        android:title="@string/menu_auto_send_message" />
 </menu>

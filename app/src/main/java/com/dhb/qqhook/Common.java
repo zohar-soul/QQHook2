@@ -6,6 +6,8 @@ import android.content.Context;
 import android.os.Environment;
 import android.widget.Toast;
 
+import java.io.File;
+
 /**
  * Created by DHB on 2015/12/31.
  */
@@ -39,5 +41,13 @@ public class Common extends Application {
         // 得到剪贴板管理器
         ClipboardManager cmb = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
         return cmb.getText().toString().trim();
+    }
+
+    public static boolean checkSdCardIsCanWrite(){
+        //Android中判断SD卡是否存在，并且可以进行写操作，可以使用如下代码
+        if (android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED)) {
+            return true;
+        }
+        return false;
     }
 }
